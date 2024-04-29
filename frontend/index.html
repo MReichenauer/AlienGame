@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="https://fav.farm/😎" />
+	<link rel="stylesheet" href="/src/assets/scss/style.scss">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Sixtyfour&display=swap"
+		rel="stylesheet">
+	<!-- fonts end -->
+	<title>FED23 API-utveckling Realtime Frontend</title>
+</head>
+
+<body>
+	<div id="app">
+
+		<!-- lobby start -->
+		<div id="lobby-container">
+
+			<h1> <span class="alien">Aliens</span> have invaded Earth... <br>let's teach them the universal language of
+				defeat!</h1>
+
+			<div id="username-input">
+				<form id="username-form">
+					<input type="text" id="username" class="form-control" placeholder="Enter Your Username">
+					<button id="wait-for-player">Press to play</button>
+				</form>
+			</div>
+
+			<div id="waiting-message">
+				<p>Waiting for another player...</p>
+			</div>
+
+			<h2>Highscore</h2>
+			<ul id="highscore-list" class="list-group">
+				<li class="list-group-item-highscore" id="player_highscore"></li>
+			</ul>
+			<h2>Ten last played games</h2>
+			<div id="match_result">
+				<ul id="previous-list" class="list-group">
+					<li class="list-group-item">Player Two - 90 points</li>
+					<li class="list-group-item">Player three - 80 points</li>
+					<li class="list-group-item">Player four - 30 points</li>
+				</ul>
+			</div>
+
+		</div>
+		<!-- lobby ends -->
+
+		<!-- Game starts -->
+		<div id="game-container">
+			<div class="grid-container" id="gridContainer">
+				<!-- 10x10 grid "cells" -->
+			</div>
+
+			<div class="score-section">
+				<h2 id="timer">You have 30 seconds..</h2>
+				<h3 id="playerOne">Player 1</h3>
+				<p>Points:</p>
+				<p id="player1Score">0</p>
+				<p>Reaction Time: </p>
+				<p id="player1ReactionTime">0 seconds</p>
+
+				<h3 id="playerTwo">Player 2</h3>
+				<p>Points:</p>
+				<p id="player2Score">0</p>
+				<p>Reaction Time: </p>
+				<p id="player2ReactionTime">0 seconds</p>
+			</div>
+
+		</div>
+
+		<!-- Game ends -->
+
+		<!-- background element -->
+		<div class="stars"></div>
+	</div>
+
+	<script type="module" src="src/main.ts"></script>
+</body>
+
+</html>
